@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>M S Compserve Pvt Ltd</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -13,6 +16,9 @@ margin:0;
 font-family:Inter;
 color:#1a1a1a;
 }
+
+
+/* HEADER */
 
 header{
 background:white;
@@ -24,8 +30,20 @@ position:sticky;
 top:0;
 }
 
-.logo{
-font-size:24px;
+/* LOGO AREA */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap: 30px;
+}
+
+.logo-area img{
+height:45px;
+}
+
+.logo-text{
+font-size:22px;
 font-weight:700;
 color:#0b5ed7;
 }
@@ -37,42 +55,115 @@ color:#333;
 font-weight:600;
 }
 
+
+
+/* HERO */
+
 .hero{
-background:linear-gradient(rgba(10,37,64,.85),rgba(10,37,64,.85)),
-url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');
-background-size:cover;
+padding:120px 0;
+display:flex;
+justify-content:center;
+}
+
+
+
+/* SLIDER */
+
+.slider-container{
+
+width:80%;
+max-width:900px;
+height:350px;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0px 10px 30px rgba(0,0,0,0.2);
+position:relative;
+
+}
+
+.slide{
+
+width:100%;
+height:100%;
+
+position:absolute;
+
+opacity:0;
+transition:1s;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
 color:white;
-padding:150px 80px;
+text-align:center;
+padding:20px;
+
 }
 
-.hero h1{
-font-size:60px;
-margin:0;
+.active{
+opacity:1;
 }
 
-.hero p{
-font-size:22px;
-margin-top:15px;
+
+
+/* COLORFUL SLIDES */
+
+.slide1{
+background:linear-gradient(45deg,#0b5ed7,#4facfe);
 }
+
+.slide2{
+background:linear-gradient(45deg,#ff6b6b,#ffb347);
+}
+
+.slide3{
+background:linear-gradient(45deg,#43e97b,#38f9d7);
+}
+
+.slide4{
+background:linear-gradient(45deg,#fa709a,#fee140);
+}
+
+
+
+/* BUTTON */
 
 .btn{
-background:#0b5ed7;
-color:white;
-padding:16px 32px;
+background:white;
+color:#0b5ed7;
+padding:14px 28px;
 border-radius:6px;
 display:inline-block;
-margin-top:25px;
+margin-top:20px;
+cursor:pointer;
+border:none;
+font-weight:600;
 }
 
+
+
+/* SECTIONS */
+
 .section{
-padding:90px 80px;
+padding:100px 80px;
 }
+
+
+
+/* TITLES */
 
 .title{
 text-align:center;
-font-size:36px;
-margin-bottom:50px;
+font-size:40px;
+margin-bottom:60px;
+font-weight:600;
 }
+
+
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -80,16 +171,58 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
 }
 
-.card{
-padding:35px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-background:white;
+
+
+/* SERVICES BACKGROUND */
+
+.services-bg{
+
+background:linear-gradient(
+180deg,
+#f8fbff 0%,
+#eef4ff 50%,
+#e6f0ff 100%
+);
+
 }
+
+
+
+/* CARDS */
+
+.card{
+
+padding:40px;
+
+border-radius:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+background:white;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* CYBER */
 
 .blue{
 background:#f4f8ff;
 }
+
+
+
+/* ABOUT */
 
 .about{
 display:grid;
@@ -102,15 +235,9 @@ width:100%;
 border-radius:12px;
 }
 
-.clients{
-text-align:center;
-padding:80px;
-}
 
-.clients img{
-height:50px;
-margin:30px;
-}
+
+/* CONTACT */
 
 .contact{
 background:#f4f8ff;
@@ -118,18 +245,107 @@ padding:80px;
 }
 
 input,textarea{
+
 width:100%;
 padding:14px;
 margin-bottom:20px;
 border:1px solid #ccc;
 border-radius:6px;
+
 }
 
+
+
+/* ADDRESS SECTION */
+
+.address-section{
+
+padding:100px 80px;
+
+background:linear-gradient(
+135deg,
+#0b5ed7,
+#1e90ff
+);
+
+color:white;
+
+text-align:center;
+
+}
+
+.address-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+margin-top:50px;
+
+}
+
+.address-box{
+
+background:rgba(255,255,255,0.1);
+
+padding:30px;
+
+border-radius:12px;
+
+}
+
+
+
+/* FOOTER */
+
 footer{
+
 background:#0a2540;
 color:white;
 padding:50px;
 text-align:center;
+
+}
+
+
+
+/* POPUP */
+
+.popup{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+z-index:999;
+
+}
+
+.popup-content{
+
+background:white;
+padding:40px;
+border-radius:10px;
+width:400px;
+max-width:90%;
+
+}
+
+.closeBtn{
+
+margin-top:15px;
+cursor:pointer;
+color:#0b5ed7;
+text-align:center;
+font-weight:600;
+
 }
 
 </style>
@@ -138,126 +354,143 @@ text-align:center;
 
 <body>
 
+
+
 <header>
-<div class="logo">M S Compserve</div>
+
+<div class="logo">
+M S Compserve Pvt Ltd
+</div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#cyber">Cybersecurity</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
+
+
+
+<!-- HERO -->
+
 <section class="hero">
 
-<h1>
-Enterprise IT Infrastructure
-</h1>
+<div class="slider-container">
 
-<p>
-IBM Server Support and Cybersecurity Solutions
-</p>
+<div class="slide slide1 active">
+<h1>Enterprise IT Infrastructure</h1>
+<p>IBM Server Support and Cybersecurity Solutions</p>
+<div class="btn" onclick="openForm()">Request Consultation</div>
+</div>
 
-<div class="btn">
-Request Consultation
+<div class="slide slide2">
+<h1>IBM Server Maintenance</h1>
+<p>24x7 Enterprise Server Support Services</p>
+<div class="btn" onclick="openForm()">Request Consultation</div>
+</div>
+
+<div class="slide slide3">
+<h1>Cybersecurity Solutions</h1>
+<p>Enterprise Risk and Security Management</p>
+<div class="btn" onclick="openForm()">Request Consultation</div>
+</div>
+
+<div class="slide slide4">
+<h1>Data Center Support</h1>
+<p>Professional Infrastructure Services</p>
+<div class="btn" onclick="openForm()">Request Consultation</div>
+</div>
+
 </div>
 
 </section>
 
-<section class="section" id="services">
 
-<div class="title">
-Infrastructure Services
-</div>
+
+<!-- SERVICES -->
+
+<section class="section services-bg" id="services">
+
+<div class="title">Infrastructure Services</div>
 
 <div class="grid">
 
 <div class="card">
 <h3>IBM Server Support</h3>
-<p>
-Enterprise IBM hardware maintenance and AMC.
-</p>
+<p>Enterprise IBM hardware maintenance.</p>
 </div>
 
 <div class="card">
 <h3>Data Center Services</h3>
-<p>
-Professional installation and maintenance.
-</p>
+<p>Installation and maintenance.</p>
 </div>
 
 <div class="card">
 <h3>Network Infrastructure</h3>
-<p>
-Enterprise network management.
-</p>
+<p>Enterprise network support.</p>
 </div>
 
 </div>
 
 </section>
 
+
+
+<!-- CYBER -->
+
 <section class="section blue" id="cyber">
 
-<div class="title">
-Cybersecurity Services
-</div>
+<div class="title">Cybersecurity Services</div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Risk Assessment</h3>
-<p>
-Security posture evaluation.
-</p>
+<p>Security evaluation.</p>
 </div>
 
 <div class="card">
 <h3>Data Protection</h3>
-<p>
-Enterprise data security.
-</p>
+<p>Enterprise data security.</p>
 </div>
 
 <div class="card">
 <h3>Vendor Security</h3>
-<p>
-Third-party risk management.
-</p>
+<p>Risk management.</p>
 </div>
 
 <div class="card">
 <h3>Security Training</h3>
-<p>
-Employee awareness programs.
-</p>
+<p>Employee awareness.</p>
 </div>
 
 </div>
 
 </section>
 
+
+
+<!-- ABOUT -->
+
 <section class="section about" id="about">
 
 <div>
 
-<h2>
-About M S Compserve Pvt Ltd
-</h2>
-
-<p>
-M S Compserve Pvt Ltd provides enterprise IT
-infrastructure and cybersecurity services.
-
-</p>
+<h2>About Company</h2>
 
 <p>
 
-We specialize in IBM server support and
-enterprise IT maintenance.
+Enterprise IT and IBM support company.
+
+We deliver quality technology solutions and networking services. 
+
+We are  located centralized location and aim to deliver quality technology solutions and professional networking services to our clients enabling them to achieve their desired business goals. Our mission is to use our expertise to the benefit of our customers, become their trusted partner and successfully complete their IT and Networking projects with the highest standards of implementation, integration and support services. Contact us today!
 
 </p>
 
@@ -267,41 +500,141 @@ enterprise IT maintenance.
 
 </section>
 
-<section class="clients">
 
-<h2>
-Technology Partners
-</h2>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Dell_Logo.svg">
-
-</section>
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-<h2>
-Contact Us
-</h2>
+<h2>Contact Us</h2>
 
-<input placeholder="Name">
+<form action="https://formsubmit.co/xyz@gmail.com" method="POST">
 
-<input placeholder="Email">
+<input type="text" name="Name" placeholder="Name" required>
 
-<textarea placeholder="Message"></textarea>
+<input type="email" name="Email" placeholder="Email" required>
 
-<div class="btn">
+<textarea name="Message" placeholder="Message" required></textarea>
+
+<button class="btn" type="submit">
 Send Message
+</button>
+
+<input type="hidden" name="_captcha" value="false">
+
+</form>
+
+</section>
+
+
+
+<!-- ADDRESS -->
+
+<section class="address-section">
+
+<h2>Our Office</h2>
+
+<div class="address-grid">
+
+<div class="address-box">
+
+<h3>Office Address</h3>
+
+<p>
+
+M S Compserve Pvt Ltd
+
+<br>
+
+Janak Puri Distt. Centre
+
+<br>
+
+Delhi, New Delhi
+
+<br>
+
+India
+
+</p>
+
+</div>
+
+
+<div class="address-box">
+
+<h3>Email</h3>
+
+<p>
+
+xyz@gmail.com
+
+</p>
+
+</div>
+
+
+<div class="address-box">
+
+<h3>Phone</h3>
+
+<p>
+
++91 XXXXX XXXXX
+
+</p>
+
+</div>
+
+
 </div>
 
 </section>
+
+
+
+
+<script>
+
+function openForm(){
+document.getElementById("consultationForm").style.display="flex";
+}
+
+function closeForm(){
+document.getElementById("consultationForm").style.display="none";
+}
+
+
+let slides=document.querySelectorAll(".slide");
+
+let index=0;
+
+function changeSlide(){
+
+slides[index].classList.remove("active");
+
+index++;
+
+if(index>=slides.length){
+index=0;
+}
+
+slides[index].classList.add("active");
+
+}
+
+setInterval(changeSlide,3000);
+
+</script>
+
+
 
 <footer>
 
 © 2026 M S Compserve Pvt Ltd
 
 </footer>
+
 
 </body>
 </html>
