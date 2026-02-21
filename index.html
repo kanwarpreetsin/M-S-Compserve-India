@@ -17,33 +17,31 @@ font-family:Inter;
 color:#1a1a1a;
 }
 
-
 /* HEADER */
 
 header{
 background:white;
-padding:20px 80px;
+padding:15px 80px;
 display:flex;
 justify-content:space-between;
+align-items:center;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 }
 
-/* LOGO AREA */
-
-.logo-area{
+.logoBox{
 display:flex;
 align-items:center;
-gap: 30px;
+gap:10px;
 }
 
-.logo-area img{
-height:45px;
+.logoBox img{
+height:40px;
 }
 
-.logo-text{
-font-size:22px;
+.logoText{
+font-size:20px;
 font-weight:700;
 color:#0b5ed7;
 }
@@ -56,114 +54,86 @@ font-weight:600;
 }
 
 
-
 /* HERO */
 
 .hero{
-padding:120px 0;
-display:flex;
-justify-content:center;
-}
 
+background:
+linear-gradient(rgba(10,37,64,.85),
+rgba(10,37,64,.85)),
+url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');
 
-
-/* SLIDER */
-
-.slider-container{
-
-width:80%;
-max-width:900px;
-height:350px;
-overflow:hidden;
-border-radius:20px;
-box-shadow:0px 10px 30px rgba(0,0,0,0.2);
-position:relative;
-
-}
-
-.slide{
-
-width:100%;
-height:100%;
-
-position:absolute;
-
-opacity:0;
-transition:1s;
+background-size:cover;
+color:white;
+padding:150px 80px;
+height:500px;
 
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
 
-color:white;
-text-align:center;
-padding:20px;
+}
+
+/* HERO CONTENT WIDTH CONTROL */
+
+.heroContent{
+
+max-width:600px;
 
 }
 
-.active{
-opacity:1;
+
+/* CYBER BACKGROUND */
+
+.cyberBg{
+
+background:
+
+linear-gradient(rgba(5,20,40,.85),
+rgba(5,20,40,.95)),
+
+url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b');
+
+background-size:cover;
+
+animation:moveBg 30s linear infinite;
+
+padding:100px 80px;
+
 }
 
+@keyframes moveBg{
 
+0%{background-position:0 0;}
+100%{background-position:1000px 0;}
 
-/* COLORFUL SLIDES */
-
-.slide1{
-background:linear-gradient(45deg,#0b5ed7,#4facfe);
 }
-
-.slide2{
-background:linear-gradient(45deg,#ff6b6b,#ffb347);
-}
-
-.slide3{
-background:linear-gradient(45deg,#43e97b,#38f9d7);
-}
-
-.slide4{
-background:linear-gradient(45deg,#fa709a,#fee140);
-}
-
 
 
 /* BUTTON */
 
 .btn{
-background:white;
-color:#0b5ed7;
-padding:14px 28px;
+background:#0b5ed7;
+color:white;
+padding:16px 32px;
 border-radius:6px;
 display:inline-block;
-margin-top:20px;
+margin-top:25px;
 cursor:pointer;
 border:none;
-font-weight:600;
 }
-
 
 
 /* SECTIONS */
 
 .section{
-padding:100px 80px;
+padding:90px 80px;
 }
-
-
-
-/* TITLES */
 
 .title{
 text-align:center;
-font-size:40px;
-margin-bottom:60px;
-font-weight:600;
+font-size:36px;
+margin-bottom:50px;
 }
-
-
-
-/* GRID */
 
 .grid{
 display:grid;
@@ -172,54 +142,17 @@ gap:40px;
 }
 
 
+/* CYBER CARDS */
 
-/* SERVICES BACKGROUND */
+.darkCard{
 
-.services-bg{
-
-background:linear-gradient(
-180deg,
-#f8fbff 0%,
-#eef4ff 50%,
-#e6f0ff 100%
-);
+background:rgba(0,0,0,0.6);
+color:white;
+padding:30px;
+border-radius:12px;
+backdrop-filter:blur(6px);
 
 }
-
-
-
-/* CARDS */
-
-.card{
-
-padding:40px;
-
-border-radius:16px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-
-background:white;
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 25px 50px rgba(0,0,0,0.15);
-
-}
-
-
-
-/* CYBER */
-
-.blue{
-background:#f4f8ff;
-}
-
 
 
 /* ABOUT */
@@ -234,7 +167,6 @@ gap:60px;
 width:100%;
 border-radius:12px;
 }
-
 
 
 /* CONTACT */
@@ -255,47 +187,15 @@ border-radius:6px;
 }
 
 
+/* ADDRESS */
 
-/* ADDRESS SECTION */
+.address{
 
-.address-section{
-
-padding:100px 80px;
-
-background:linear-gradient(
-135deg,
-#0b5ed7,
-#1e90ff
-);
-
-color:white;
-
+padding:80px;
 text-align:center;
+background:white;
 
 }
-
-.address-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:40px;
-
-margin-top:50px;
-
-}
-
-.address-box{
-
-background:rgba(255,255,255,0.1);
-
-padding:30px;
-
-border-radius:12px;
-
-}
-
 
 
 /* FOOTER */
@@ -308,7 +208,6 @@ padding:50px;
 text-align:center;
 
 }
-
 
 
 /* POPUP */
@@ -358,12 +257,21 @@ font-weight:600;
 
 <header>
 
-<div class="logo">
+<div class="logoBox">
+
+<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+
+<div class="logoText">
+
 M S Compserve Pvt Ltd
+
+</div>
+
 </div>
 
 <nav>
 
+<a href="#">WEBSITE UNDER MAINTENANCE</a>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#cyber">Cybersecurity</a>
@@ -376,36 +284,99 @@ M S Compserve Pvt Ltd
 
 
 
-
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="slider-container">
+<div class="heroContent">
 
-<div class="slide slide1 active">
-<h1>Enterprise IT Infrastructure</h1>
-<p>IBM Server Support and Cybersecurity Solutions</p>
-<div class="btn" onclick="openForm()">Request Consultation</div>
+<h1>
+
+Enterprise IT Infrastructure and Cyber Solutions
+
+</h1>
+
+<p>
+
+IBM Server Support and Cybersecurity Solutions
+
+</p>
+
+<div class="btn" onclick="openForm()">
+
+Request Consultation
+
 </div>
 
-<div class="slide slide2">
-<h1>IBM Server Maintenance</h1>
-<p>24x7 Enterprise Server Support Services</p>
-<div class="btn" onclick="openForm()">Request Consultation</div>
 </div>
 
-<div class="slide slide3">
-<h1>Cybersecurity Solutions</h1>
-<p>Enterprise Risk and Security Management</p>
-<div class="btn" onclick="openForm()">Request Consultation</div>
+</section>
+
+
+
+<!-- CYBER MOVING BACKGROUND -->
+
+<section class="cyberBg" id="cyber">
+
+<div class="title" style="color:white">
+
+Cybersecurity Services
+
 </div>
 
-<div class="slide slide4">
-<h1>Data Center Support</h1>
-<p>Professional Infrastructure Services</p>
-<div class="btn" onclick="openForm()">Request Consultation</div>
+<div class="grid">
+
+
+<div class="darkCard">
+
+<h3>
+
+Data Protection & Governance
+
+</h3>
+
+<p>
+
+Protect enterprise data from cyber threats.
+
+</p>
+
 </div>
+
+
+<div class="darkCard">
+
+<h3>
+
+Cybersecurity Risk Management
+
+</h3>
+
+<p>
+
+Enterprise risk monitoring.
+
+</p>
+
+</div>
+
+
+<div class="darkCard">
+
+<h3>
+
+Identity Access Management
+
+</h3>
+
+<p>
+
+Secure access control.
+
+</p>
+
+</div>
+
 
 </div>
 
@@ -415,60 +386,83 @@ M S Compserve Pvt Ltd
 
 <!-- SERVICES -->
 
-<section class="section services-bg" id="services">
+<section class="section" id="services">
 
-<div class="title">Infrastructure Services</div>
+<div class="title">
+
+Infrastructure Services
+
+</div>
 
 <div class="grid">
 
-<div class="card">
-<h3>IBM Server Support</h3>
-<p>Enterprise IBM hardware maintenance.</p>
-</div>
 
 <div class="card">
+
+<h3>IBM Server and other brands services & support</h3>
+
+<p>
+
+Enterprise hardware support.
+IBM X-Series Server
+Blade Center Server
+Chassis Rack Server
+
+
+Dell, HP and All brands services available
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Managed Security Services</h3>
+
+<p>
+Strengthen your Security posture and reduce your costs with managed security and cloud services. We provide comprehensive  assistance to organizations security needs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Security Consulting & Designing</h3>
+
+<p>
+We offer a range of physical and logical security systems planning, security design and professional services  across multiple domains
+</p>
+
+</div>
+
+
+<div class="card">
+
 <h3>Data Center Services</h3>
-<p>Installation and maintenance.</p>
+
+<p>
+
+Installation and maintenance.
+
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Network Infrastructure</h3>
-<p>Enterprise network support.</p>
-</div>
+
+<p>
+
+Enterprise networking.
+
+</p>
 
 </div>
 
-</section>
-
-
-
-<!-- CYBER -->
-
-<section class="section blue" id="cyber">
-
-<div class="title">Cybersecurity Services</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Risk Assessment</h3>
-<p>Security evaluation.</p>
-</div>
-
-<div class="card">
-<h3>Data Protection</h3>
-<p>Enterprise data security.</p>
-</div>
-
-<div class="card">
-<h3>Vendor Security</h3>
-<p>Risk management.</p>
-</div>
-
-<div class="card">
-<h3>Security Training</h3>
-<p>Employee awareness.</p>
-</div>
 
 </div>
 
@@ -482,21 +476,25 @@ M S Compserve Pvt Ltd
 
 <div>
 
-<h2>About Company</h2>
+<h2>
+
+About Company
+
+</h2>
 
 <p>
 
-Enterprise IT and IBM support company.
+M S Compserve Pvt Ltd provides enterprise IT infrastructure and cybersecurity services.
 
-We deliver quality technology solutions and networking services. 
-
-We are  located centralized location and aim to deliver quality technology solutions and professional networking services to our clients enabling them to achieve their desired business goals. Our mission is to use our expertise to the benefit of our customers, become their trusted partner and successfully complete their IT and Networking projects with the highest standards of implementation, integration and support services. Contact us today!
+We are centrally located and to deliver quality technology solutions and professional networking services to our clients enabling them to achieve their desired business goals. Our mission is to use our expertise to the benefit of our customers, become their trusted partner and successfully complete their IT and Networking projects with the highest standards of implementation, integration and support services. Contact us today!
 
 </p>
 
 </div>
 
+
 <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+
 
 </section>
 
@@ -506,21 +504,26 @@ We are  located centralized location and aim to deliver quality technology solut
 
 <section class="contact" id="contact">
 
-<h2>Contact Us</h2>
+<h2>
+
+Contact Us
+
+</h2>
+
 
 <form action="https://formsubmit.co/xyz@gmail.com" method="POST">
 
-<input type="text" name="Name" placeholder="Name" required>
+<input type="text" placeholder="Name" required>
 
-<input type="email" name="Email" placeholder="Email" required>
+<input type="email" placeholder="Email" required>
 
-<textarea name="Message" placeholder="Message" required></textarea>
+<textarea placeholder="Message"></textarea>
 
-<button class="btn" type="submit">
+<button class="btn">
+
 Send Message
-</button>
 
-<input type="hidden" name="_captcha" value="false">
+</button>
 
 </form>
 
@@ -530,67 +533,49 @@ Send Message
 
 <!-- ADDRESS -->
 
-<section class="address-section">
+<section class="address">
 
-<h2>Our Office</h2>
+<h2>
 
-<div class="address-grid">
+Our Office
 
-<div class="address-box">
+</h2>
 
-<h3>Office Address</h3>
+<p>M S Compserve Pvt Ltd</p>
 
-<p>
+<p>Janak Puri Distt. Centre</p>
 
-M S Compserve Pvt Ltd
+<p>New Delhi India</p>
 
-<br>
+<p>Email: info@mscompserve.com</p>
 
-Janak Puri Distt. Centre
-
-<br>
-
-Delhi, New Delhi
-
-<br>
-
-India
-
-</p>
-
-</div>
-
-
-<div class="address-box">
-
-<h3>Email</h3>
-
-<p>
-
-xyz@gmail.com
-
-</p>
-
-</div>
-
-
-<div class="address-box">
-
-<h3>Phone</h3>
-
-<p>
-
-+91 XXXXX XXXXX
-
-</p>
-
-</div>
-
-
-</div>
+<p>Phone: +91-9000000000</p>
 
 </section>
 
+
+
+<!-- POPUP -->
+
+<div id="consultationForm" class="popup">
+
+<div class="popup-content">
+
+<h2>Request Consultation</h2>
+
+<input placeholder="Name">
+
+<input placeholder="Email">
+
+<textarea placeholder="Requirement"></textarea>
+
+<div class="btn" onclick="closeForm()">Submit</div>
+
+<div class="closeBtn" onclick="closeForm()">Close</div>
+
+</div>
+
+</div>
 
 
 
@@ -603,27 +588,6 @@ document.getElementById("consultationForm").style.display="flex";
 function closeForm(){
 document.getElementById("consultationForm").style.display="none";
 }
-
-
-let slides=document.querySelectorAll(".slide");
-
-let index=0;
-
-function changeSlide(){
-
-slides[index].classList.remove("active");
-
-index++;
-
-if(index>=slides.length){
-index=0;
-}
-
-slides[index].classList.add("active");
-
-}
-
-setInterval(changeSlide,3000);
 
 </script>
 
