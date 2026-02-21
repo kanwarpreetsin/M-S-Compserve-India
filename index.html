@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M S Compserve Pvt Ltd</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -12,71 +11,124 @@
 body{
 margin:0;
 font-family:Inter;
+color:#1a1a1a;
 }
 
 header{
-background:#0a2540;
-color:white;
-padding:20px 60px;
+background:white;
+padding:20px 80px;
 display:flex;
 justify-content:space-between;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#0b5ed7;
 }
 
 nav a{
-color:white;
 margin-left:30px;
 text-decoration:none;
+color:#333;
+font-weight:600;
 }
 
 .hero{
-background:linear-gradient(#0a2540,#1f6feb);
+background:linear-gradient(rgba(10,37,64,.85),rgba(10,37,64,.85)),
+url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');
+background-size:cover;
 color:white;
-padding:120px 80px;
+padding:150px 80px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:60px;
+margin:0;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
 }
 
 .btn{
-background:white;
-color:#1f6feb;
-padding:15px 30px;
+background:#0b5ed7;
+color:white;
+padding:16px 32px;
+border-radius:6px;
 display:inline-block;
-margin-top:20px;
-border-radius:5px;
+margin-top:25px;
 }
 
 .section{
-padding:80px;
+padding:90px 80px;
 }
 
 .title{
 text-align:center;
-font-size:34px;
-margin-bottom:40px;
+font-size:36px;
+margin-bottom:50px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
 }
 
 .card{
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px #ddd;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+background:white;
 }
 
 .blue{
-background:#f0f6ff;
+background:#f4f8ff;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.about img{
+width:100%;
+border-radius:12px;
+}
+
+.clients{
+text-align:center;
+padding:80px;
+}
+
+.clients img{
+height:50px;
+margin:30px;
+}
+
+.contact{
+background:#f4f8ff;
+padding:80px;
+}
+
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:6px;
 }
 
 footer{
 background:#0a2540;
 color:white;
-padding:40px;
+padding:50px;
 text-align:center;
 }
 
@@ -87,15 +139,13 @@ text-align:center;
 <body>
 
 <header>
-
-<h2>
-M S Compserve Pvt Ltd
-</h2>
+<div class="logo">M S Compserve</div>
 
 <nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#cyber">Cybersecurity</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -104,15 +154,15 @@ M S Compserve Pvt Ltd
 <section class="hero">
 
 <h1>
-Enterprise IT & Cybersecurity
+Enterprise IT Infrastructure
 </h1>
 
 <p>
-Infrastructure Support and IBM Server Specialists
+IBM Server Support and Cybersecurity Solutions
 </p>
 
 <div class="btn">
-Contact Us
+Request Consultation
 </div>
 
 </section>
@@ -120,48 +170,30 @@ Contact Us
 <section class="section" id="services">
 
 <div class="title">
-IT Infrastructure Services
+Infrastructure Services
 </div>
 
 <div class="grid">
 
 <div class="card">
-
-<h3>
-IBM Server Maintenance
-</h3>
-
+<h3>IBM Server Support</h3>
 <p>
-Enterprise IBM server support and AMC services.
-
+Enterprise IBM hardware maintenance and AMC.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>
-Data Center Support
-</h3>
-
+<h3>Data Center Services</h3>
 <p>
-Installation and maintenance of enterprise hardware.
-
+Professional installation and maintenance.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>
-Network Management
-</h3>
-
+<h3>Network Infrastructure</h3>
 <p>
-Corporate network setup and monitoring.
-
+Enterprise network management.
 </p>
-
 </div>
 
 </div>
@@ -177,98 +209,91 @@ Cybersecurity Services
 <div class="grid">
 
 <div class="card">
-
-<h3>
-Risk Assessment
-</h3>
-
+<h3>Risk Assessment</h3>
 <p>
-Security evaluation and consulting services.
-
+Security posture evaluation.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>
-Data Protection
-</h3>
-
+<h3>Data Protection</h3>
 <p>
-Protect critical enterprise data.
-
+Enterprise data security.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>
-Vendor Risk
-</h3>
-
+<h3>Vendor Security</h3>
 <p>
-Third-party security monitoring.
-
+Third-party risk management.
 </p>
-
 </div>
 
 <div class="card">
-
-<h3>
-Security Training
-</h3>
-
+<h3>Security Training</h3>
 <p>
 Employee awareness programs.
-
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section about" id="about">
 
-<div class="title">
-About Company
+<div>
+
+<h2>
+About M S Compserve Pvt Ltd
+</h2>
+
+<p>
+M S Compserve Pvt Ltd provides enterprise IT
+infrastructure and cybersecurity services.
+
+</p>
+
+<p>
+
+We specialize in IBM server support and
+enterprise IT maintenance.
+
+</p>
+
 </div>
 
-<p>
-
-M S Compserve Pvt Ltd provides enterprise IT infrastructure
-and cybersecurity services.
-
-</p>
-
-<p>
-
-We specialize in IBM server maintenance and enterprise
-security solutions.
-
-</p>
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
 
 </section>
 
-<section class="section blue" id="contact">
+<section class="clients">
 
-<div class="title">
+<h2>
+Technology Partners
+</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Dell_Logo.svg">
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>
 Contact Us
+</h2>
+
+<input placeholder="Name">
+
+<input placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<div class="btn">
+Send Message
 </div>
-
-<p>
-Email: info@mscompserve.com
-
-</p>
-
-<p>
-Phone: +91 XXXXXXXX
-
-</p>
 
 </section>
 
